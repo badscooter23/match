@@ -14,13 +14,20 @@ func main() {
 
 	if numArgs != 3 {
 		fmt.Println("expected: ./match regexp string")
+		if numArgs < 3 {
+			fmt.Println( "missing arugment(s)" )
+		}
+
+		if numArgs > 3 {
+			fmt.Println( "too many arguments supplied" )
+		}
 		return
 	}
-
 	p := args[1]
 	s := args[2]
 
-	fmt.Println("Checking to see if ", p, "matches", s)
+
+	fmt.Println("Checking to see if", p, "matches", s)
 
 	fmt.Println("... compare using regex.MatchString()... ")
 	match, e := regexp.MatchString(p, s)
