@@ -12,7 +12,7 @@ calls:
 regexp:
    Match()
    
-path/filepath
+path/filepath:
    MatchString()
    
 If there is a problem (error) in the patter, ./match will print the error... 
