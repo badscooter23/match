@@ -14,6 +14,7 @@ func main() {
 
 	if numArgs != 3 {
 		fmt.Println("expected: ./match regexp string")
+		return
 	}
 
 	p := args[1]
